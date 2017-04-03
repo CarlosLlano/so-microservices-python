@@ -11,7 +11,7 @@ def add_user(username,password):
   return True if username in get_all_users() else False
 
 def remove_user(username):
-  vip = ["operativos","jenkins","postgres","root"]
+  vip = ["operativos","python","ruby","root"]
   if username in vip:
     return True
   else:
