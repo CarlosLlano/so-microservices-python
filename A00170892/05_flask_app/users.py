@@ -41,17 +41,6 @@ def delete_user():
   else:
     return 'all users were deleted', 200
 
-@app.route(api_url+'/users/<string:username>',methods=['GET'])
-def read_one_user(username):
-    return username,200
-
-@app.route(api_url+'/users/recently_logged',methods=['GET'])
-def read_user_filter():
-    time = request.args.get("time")
-    group = request.args.get("group")
-    return group,200
-
-
 
 if __name__ == "__main__":
   app.run(host='0.0.0.0',port=5000,debug='True')
