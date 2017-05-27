@@ -7,7 +7,8 @@ from users_commands import get_all_users, add_user, remove_user
 app = Flask(__name__)
 api = Api(app,version='1.0', title='API for users management', description='A demonstration of a Flask RestPlus powered API')
 
-ns = api.namespace('v1.0/users', description='Operations related to create users')
+
+ns = api.namespace('v1.0/users',description='Operations related to create users')
 
 @ns.route('/')
 class UserCollection(Resource):
